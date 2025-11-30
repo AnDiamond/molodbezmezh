@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Молодь Без Меж</title>
+  <style>
+    :root{--accent:#111;--accent-2:#ffd700;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial; margin:0; color:#111}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:#fff;border-bottom:4px solid var(--accent)}
+    .brand{font-weight:700;font-size:20px}
+    .top-links{display:flex;gap:12px;align-items:center}
+    .top-links a{padding:8px 12px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-size:14px}
+
+    .hero{padding:22px;display:flex;flex-direction:column;gap:18px;max-width:1100px;margin:0 auto}
+    .photo-row{display:flex;gap:16px;justify-content:center}
+    .photo{flex:1;min-width:120px;height:120px;background:var(--accent-2);display:flex;align-items:center;justify-content:center;border:6px solid #000;font-weight:700}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .content{display:flex;gap:20px;align-items:flex-start}
+    .main{flex:1}
+    h2{margin:0 0 10px 0}
+    p.lead{margin:0 0 14px 0;color:var(--muted)}
+
+    .btn{display:inline-block;background:#000;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:600}
+    .statut{margin-top:12px}
+
+    footer{margin-top:40px;padding:18px 20px;background:#f6f6f6;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (min-width:760px){
+      .hero{padding:40px}
+      .photo{height:160px}
+      .content{flex-direction:row}
+      .side{width:320px}
+    }
+    @media (max-width:759px){
+      .photo-row{flex-direction:row}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Молодь Без Меж</div>
+    <nav class="top-links">
+      <a href="#statut">Статут</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <!-- Фото: замініть src на свої файли -->
+    <section class="photo-row" aria-label="Головні фото">
+      <div class="photo"><img src="images/photo1.jpg" alt="Фото 1 — опис" onerror="this.parentNode.textContent='Фото'"/></div>
+      <div class="photo"><img src="images/photo2.jpg" alt="Фото 2 — опис" onerror="this.parentNode.textContent='фото'"/></div>
+      <div class="photo"><img src="images/photo3.jpg" alt="Фото 3 — опис" onerror="this.parentNode.textContent='фото'"/></div>
+    </section>
+
+    <section class="content">
+      <article class="main">
+        <h2>Чим ми займаємось?</h2>
+        <p class="lead"><strong>«Молодь Без Меж»</strong> — це простір підтримки, розвитку та безпечного спілкування для підлітків і молоді. Ми пропонуємо психологічну, соціальну та освітню допомогу, підтримуємо ініціативи молоді і створюємо можливості для самореалізації.</p>
+
+        <h3>Наші напрямки</h3>
+        <ul>
+          <li><strong>Психологічна підтримка:</strong> індивідуальні та групові консультації, онлайн-чати.</li>
+          <li><strong>Соціальна та правова допомога:</strong> супровід у випадках булінгу, конфліктів і дискримінації.</li>
+          <li><strong>Освітні програми:</strong> тренінги з лідерства, медіаграмотності, кар'єри.</li>
+          <li><strong>Профілактика:</strong> безпека онлайн, профілактичні кампанії серед молоді.</li>
+          <li><strong>Підтримка ініціатив:</strong> гранти, менторство, простір для проєктів.</li>
+        </ul>
+
+        <p>Хочеш долучитися або маєш питання? Напиши нам — ми поруч.</p>
+
+        <div class="statut">
+          <a class="btn" href="https://drive.google.com/file/d/1PB6gBNsYCvm-GOw6uhqkCZ4TwWHNyvW0/view?usp=sharing">Переглянути статут</a>
+        </div>
+      </article>
+
+      <aside class="side" aria-label="Контакти">
+        <h3>Контакти</h3>
+        <p>Електронна пошта: <a href="mailto:molodbezmezh@gmail.com">molodbezmezh@gmail.com</a></p>
+        <p>Телефон/Telegram: <a href="tel:+380984243596">+380 98 424 35 96</a></p>
+        <p>Адреса: Самар, вул. Гетьманська 120</p>
+
+        <h4>Підтримати нас</h4>
+        <p>Малими кроками ви допомагаєте багатьом молодим людям розкритися. Розглядаємо гранти, донати та волонтерство.</p>
+        <a class="btn" href="#support">Підтримати</a>
+      </aside>
+    </section>
+
+    <!-- Статут (коротка візуалізація або завантажуваний PDF) -->
+    <section id="statut" style="margin-top:26px">
+      <h3>Статут організації</h3>
+      <p>Тут можна розмістити повний текст статуту або посилання на PDF-файл для завантаження.</p>
+      <p><a href="https://drive.usercontent.google.com/u/0/uc?id=1PB6gBNsYCvm-GOw6uhqkCZ4TwWHNyvW0&export=download" class="btn" download>Завантажити повний статут (PDF)</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year">2025</span> «Молодь Без Меж» — Простір підтримки та розвитку для підлітків і молоді.
+  </footer>
+
+  <script>
+    // автоматично підставити рік
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
